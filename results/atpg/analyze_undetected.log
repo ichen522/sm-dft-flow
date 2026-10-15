@@ -1,0 +1,47 @@
+release scan_en   : 348 redundant faults mapped (0 not mappable), detected 0, still redundant 348, aborted 0
+release resets    : 348 redundant faults mapped (0 not mappable), detected 0, still redundant 348, aborted 0
+release all       : 348 redundant faults mapped (0 not mappable), detected 0, still redundant 348, aborted 0
+aborted 104 retried with backtrack limit 10000: detected 4, proven redundant 0, still aborted 100
+
+collapsed faults of the capture-mode model: 595100
+  DT  detected                              : 594648
+  AU  untestable only under the constraints : 0
+  UR  redundant logic                       : 348
+  ND  aborted (backtrack limit 10)          : 104
+fault coverage  DT/all            : 99.924 %
+test coverage   DT/(all-UR)       : 99.983 %   (TetraMAX definition, AU counted as missed)
+Atalanta "test coverage" DT/(all-AU-UR): 99.983 %
+with the aborted faults retried   : fault coverage 99.925 %, test coverage 99.983 %
+primitive gates: 370249 with nothing held constant, 327777 in capture mode -> 42472 gates only exist in shift / reset (UD-tied / blocked, tested by the chain test or not at all)
+
+by block                                             AU     UR     ND
+  tensor core MAC: adder / accumulator [Innovus FE_RC]      0    342     48
+  tensor core MAC: adder / accumulator                  0      0     56
+  sm_core glue [Innovus FE_RC]                          0      4      0
+  en_gen                                                0      2      0
+
+by cell type (AU + UR)
+  on cells created by Innovus restructuring (FE_RC_*): 346 of 348
+  OR2X2 161, INVX2 89, NAND2X1 79, NOR2X1 6, AOI22X1 5, AOI21X1 4, OAI21X1 2, NAND3X1 1, AND2X2 1
+
+examples UR:
+  N107838->N107837 /0      OR2X2      FE_RC_5107_0                                            net FE_RN_3572_0
+  N99417 /1                INVX2      FE_RC_10091_0                                           net FE_RN_7168_0
+  N100990 /1               INVX2      FE_RC_9092_0                                            net FE_RN_6417_0
+  N101303->N101301 /0      OR2X2      FE_RC_8897_0                                            net FE_RN_6277_0
+  N108686->N108688 /1      NAND2X1    FE_RC_4535_0                                            net FE_RN_3132_0
+  N103197->N104991 /0      OR2X2      FE_RC_6667_0                                            net FE_RN_4674_0
+  N105695->N105694 /0      OR2X2      FE_RC_6222_0                                            net FE_RN_4349_0
+  N111397->N111396 /0      OR2X2      FE_RC_2353_0                                            net FE_RN_1576_0
+
+examples ND:
+  N317974->N317973 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_U468            net u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_n444
+  N315699->N315698 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_6__u_mac_U468            net u_core_SUBP_3__u_tc_ROW_1__COL_6__u_mac_n444
+  N313447->N313446 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_5__u_mac_U468            net u_core_SUBP_3__u_tc_ROW_1__COL_5__u_mac_n444
+  N311149->N311146 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_U8              net u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_n444
+  N308893->N308890 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_3__u_mac_U8              net u_core_SUBP_3__u_tc_ROW_1__COL_3__u_mac_n444
+  N306578->N306575 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_2__u_mac_U8              net u_core_SUBP_3__u_tc_ROW_1__COL_2__u_mac_n444
+  N304322->N304319 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_1__u_mac_U8              net u_core_SUBP_3__u_tc_ROW_1__COL_1__u_mac_n444
+  N302029->N302026 /0      OR2X2      u_core_SUBP_3__u_tc_ROW_1__COL_0__u_mac_U8              net u_core_SUBP_3__u_tc_ROW_1__COL_0__u_mac_n444
+
+per-fault list: atpg/undet/classes.txt

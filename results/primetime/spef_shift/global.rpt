@@ -1,0 +1,12 @@
+****************************************
+Report : global_timing
+	-format { narrow }
+Design : sm_top
+Version: Y-2026.03
+Date   : Wed Oct 14 22:20:09 2026
+****************************************
+
+No setup violations found.
+
+No hold violations found.
+1

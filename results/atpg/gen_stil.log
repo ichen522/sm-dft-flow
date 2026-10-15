@@ -1,0 +1,4 @@
+wrote atpg/sm_top.stil: 2056 patterns, 16 chains, shift length 1347, 91.9 MB
+timing: period 100 ns, strobe ['45'] ns, clock pulse 50-95 ns (tb_atpg.v: 100 ns, strobe 45 ns, rise 50 ns)
+read back: 2057 load_unload + 2056 capture calls, 16 scan chains (0 with a different cell order), 89431888 bits compared with the .mem files, 0 differ
+STIL CHECK PASSED

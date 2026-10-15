@@ -1,0 +1,26 @@
+20871 inputs (164 PI, 20707 PPI), 20933 outputs, 327777 gates
+LOC, capture domain clk_mem:
+  stuck-at patterns as LOC              403 patterns: 2216/20000 =  11.08 %, launched: 12.37 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+  random LOC                           4096 patterns: 2342/20000 =  11.71 %, launched: 13.41 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+LOC, capture domain tile_clk:
+  stuck-at patterns as LOC             1653 patterns: 16234/20000 =  81.17 %, launched: 84.24 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+  random LOC                           4096 patterns: 16257/20000 =  81.28 %, launched: 84.86 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+union LOC stuck-at patterns (all domains) : 18450/20000 = 92.25 %  (95% 91.87 - 92.61)
+union LOC + random (all domains)          : 18794/20000 = 93.97 %  (95% 93.63 - 94.29)
+LOS, capture domain clk_mem:
+  stuck-at patterns as LOS              403 patterns: 2344/20000 =  11.72 %, launched: 12.51 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+  random LOS                           4096 patterns: 2374/20000 =  11.87 %, launched: 13.76 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+LOS, capture domain tile_clk:
+  stuck-at patterns as LOS             1653 patterns: 16888/20000 =  84.44 %, launched: 87.33 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+  random LOS                           4096 patterns: 16911/20000 =  84.56 %, launched: 88.44 %
+    crosscheck vs brute force: 60/60 agree (30 called detected, 30 launched but undetected; brute force detects 30)
+union LOS stuck-at patterns (all domains) : 19232/20000 = 96.16 %  (95% 95.88 - 96.42)
+union LOS + random (all domains)          : 19291/20000 = 96.45 %  (95% 96.19 - 96.70)
+union LOC + LOS, all patterns             : 19658/20000 = 98.29 %  (95% 98.10 - 98.46)

@@ -1,0 +1,17 @@
+100 patterns applied, 27 scan_out + 0 PO fails in the log -> 27 failing (pattern, observation point) pairs on 4 observation points
+candidate nets (in the fan-in cone of all 4 failing points): 1735
+fault-free model vs expected values in the pattern data: 1638000 bits, 0 differ
+simulated 3468 candidate faults
+rank   TFSF   TFSP   TPSF  fault
+   1     27      0      0  u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_n424 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U336) stuck-at-1  <- perfect match
+   2     16     11      0  _t81595 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U336) stuck-at-0
+   3     16     11      0  _t81596 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U336) stuck-at-0
+   4     11     16      0  _t81594 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U336) stuck-at-0
+   5     13     14     11  u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_n208 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_U345) stuck-at-0
+   6     13     14     11  _t81920 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_U345) stuck-at-1
+   7     13     14     11  _t81922 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_U345) stuck-at-1
+   8      1     26      1  _t81881 (FAX1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U47) stuck-at-0
+   9      1     26      1  _t81887 (FAX1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U45) stuck-at-0
+  10      0     27      0  _t81262 (MUX2X1 u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_U462) stuck-at-1
+perfect matches: 1 (faults that are equivalent for these patterns form one class)
+injected defect u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_n424 stuck-at-1: rank 1, score 0 (best score 0)

@@ -1,0 +1,326 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-nosplit
+	-slack_lesser_than 1000.00
+	-max_paths 10
+	-sort_by slack
+Design : sm_top
+Version: Y-2026.03
+Date   : Wed Oct 14 22:20:01 2026
+****************************************
+
+
+  Startpoint: u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_b_r_reg_3_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_b_r_reg_4_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.89 *     0.89
+  u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_b_r_reg_3_/CLK (DFFPOSX1)                 0.00       0.89 r
+  u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_b_r_reg_3_/Q (DFFPOSX1)                   0.05 *     0.94 r
+  SCAN_MUX_14532/Y (MUX2X1)                                                         0.03 *     0.97 f
+  SCAN_INV_14532/Y (INVX1)                                                          0.02 *     0.99 r
+  u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_b_r_reg_4_/D (DFFPOSX1)                   0.00 *     0.99 r
+  data arrival time                                                                            0.99
+
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.91 *     0.91
+  u_core_SUBP_3__u_tc_ROW_1__COL_7__u_mac_b_r_reg_4_/CLK (DFFPOSX1)                            0.91 r
+  clock reconvergence pessimism                                                     0.00       0.91
+  clock uncertainty                                                                 0.05       0.96
+  library hold time                                                                -0.02 *     0.94
+  data required time                                                                           0.94
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           0.94
+  data arrival time                                                                           -0.99
+  --------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                  0.04
+
+
+  Startpoint: u_core_RES_0__rm_reg_8__1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_RES_0__rm_reg_8__2_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                     Incr       Path
+  --------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                0.00       0.00
+  clock network delay (propagated)                          0.89 *     0.89
+  u_core_RES_0__rm_reg_8__1_/CLK (DFFPOSX1)                 0.00       0.89 r
+  u_core_RES_0__rm_reg_8__1_/Q (DFFPOSX1)                   0.11 *     1.01 f
+  SCAN_MUX_400/Y (MUX2X1)                                   0.05 *     1.06 r
+  SCAN_INV_400/Y (INVX1)                                    0.03 *     1.08 f
+  u_core_RES_0__rm_reg_8__2_/D (DFFPOSX1)                   0.00 *     1.08 f
+  data arrival time                                                    1.08
+
+  clock tile_clk (rise edge)                                0.00       0.00
+  clock network delay (propagated)                          0.93 *     0.93
+  u_core_RES_0__rm_reg_8__2_/CLK (DFFPOSX1)                            0.93 r
+  clock reconvergence pessimism                             0.00       0.93
+  clock uncertainty                                         0.05       0.98
+  library hold time                                         0.05 *     1.03
+  data required time                                                   1.03
+  --------------------------------------------------------------------------------
+  data required time                                                   1.03
+  data arrival time                                                   -1.08
+  --------------------------------------------------------------------------------
+  slack (MET)                                                          0.05
+
+
+  Startpoint: u_core_bmem_reg_4__100_ (rising edge-triggered flip-flop clocked by clk_mem)
+  Endpoint: u_core_bmem_reg_4__101_ (rising edge-triggered flip-flop clocked by clk_mem)
+  Last common pin: clk_mem
+  Path Group: clk_mem
+  Path Type: min
+
+  Point                                                  Incr       Path
+  -----------------------------------------------------------------------------
+  clock clk_mem (rise edge)                              0.00       0.00
+  clock network delay (propagated)                       0.58 *     0.58
+  u_core_bmem_reg_4__100_/CLK (DFFPOSX1)                 0.00       0.58 r
+  u_core_bmem_reg_4__100_/Q (DFFPOSX1)                   0.12 *     0.70 f
+  SCAN_MUX_19138/Y (MUX2X1)                              0.05 *     0.75 r
+  SCAN_INV_19138/Y (INVX1)                               0.03 *     0.77 f
+  u_core_bmem_reg_4__101_/D (DFFPOSX1)                   0.00 *     0.77 f
+  data arrival time                                                 0.77
+
+  clock clk_mem (rise edge)                              0.00       0.00
+  clock network delay (propagated)                       0.59 *     0.59
+  u_core_bmem_reg_4__101_/CLK (DFFPOSX1)                            0.59 r
+  clock reconvergence pessimism                          0.00       0.59
+  clock uncertainty                                      0.05       0.64
+  library hold time                                      0.07 *     0.71
+  data required time                                                0.71
+  -----------------------------------------------------------------------------
+  data required time                                                0.71
+  data arrival time                                                -0.77
+  -----------------------------------------------------------------------------
+  slack (MET)                                                       0.06
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_0__COL_6__u_mac_b_r_reg_10_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_1__u_tc_ROW_0__COL_6__u_mac_b_r_reg_11_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.92 *     0.92
+  u_core_SUBP_1__u_tc_ROW_0__COL_6__u_mac_b_r_reg_10_/CLK (DFFPOSX1)                 0.00       0.92 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_6__u_mac_b_r_reg_10_/Q (DFFPOSX1)                   0.05 *     0.97 r
+  SCAN_MUX_7583/Y (MUX2X1)                                                           0.03 *     1.00 f
+  SCAN_INV_7583/Y (INVX1)                                                            0.02 *     1.02 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_6__u_mac_b_r_reg_11_/D (DFFPOSX1)                   0.00 *     1.02 r
+  data arrival time                                                                             1.02
+
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.92 *     0.92
+  u_core_SUBP_1__u_tc_ROW_0__COL_6__u_mac_b_r_reg_11_/CLK (DFFPOSX1)                            0.92 r
+  clock reconvergence pessimism                                                      0.00       0.92
+  clock uncertainty                                                                  0.05       0.97
+  library hold time                                                                 -0.02 *     0.96
+  data required time                                                                            0.96
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            0.96
+  data arrival time                                                                            -1.02
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                   0.06
+
+
+  Startpoint: u_core_SUBP_2__mem_reg_2__22_ (rising edge-triggered flip-flop clocked by clk_mem)
+  Endpoint: u_core_SUBP_2__mem_reg_2__23_ (rising edge-triggered flip-flop clocked by clk_mem)
+  Last common pin: clk_mem
+  Path Group: clk_mem
+  Path Type: min
+
+  Point                                                        Incr       Path
+  -----------------------------------------------------------------------------------
+  clock clk_mem (rise edge)                                    0.00       0.00
+  clock network delay (propagated)                             0.59 *     0.59
+  u_core_SUBP_2__mem_reg_2__22_/CLK (DFFPOSX1)                 0.00       0.59 r
+  u_core_SUBP_2__mem_reg_2__22_/Q (DFFPOSX1)                   0.05 *     0.65 r
+  SCAN_MUX_17523/Y (MUX2X1)                                    0.03 *     0.68 f
+  SCAN_INV_17523/Y (INVX1)                                     0.02 *     0.69 r
+  u_core_SUBP_2__mem_reg_2__23_/D (DFFPOSX1)                   0.00 *     0.69 r
+  data arrival time                                                       0.69
+
+  clock clk_mem (rise edge)                                    0.00       0.00
+  clock network delay (propagated)                             0.59 *     0.59
+  u_core_SUBP_2__mem_reg_2__23_/CLK (DFFPOSX1)                            0.59 r
+  clock reconvergence pessimism                                0.00       0.59
+  clock uncertainty                                            0.05       0.64
+  library hold time                                           -0.02 *     0.63
+  data required time                                                      0.63
+  -----------------------------------------------------------------------------------
+  data required time                                                      0.63
+  data arrival time                                                      -0.69
+  -----------------------------------------------------------------------------------
+  slack (MET)                                                             0.06
+
+
+  Startpoint: u_core_SUBP_3__u_tc_ROW_0__COL_4__u_mac_b_r_reg_2_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_3__u_tc_ROW_0__COL_4__u_mac_b_r_reg_3_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.90 *     0.90
+  u_core_SUBP_3__u_tc_ROW_0__COL_4__u_mac_b_r_reg_2_/CLK (DFFPOSX1)                 0.00       0.90 r
+  u_core_SUBP_3__u_tc_ROW_0__COL_4__u_mac_b_r_reg_2_/Q (DFFPOSX1)                   0.07 *     0.97 r
+  SCAN_MUX_13273/Y (MUX2X1)                                                         0.03 *     1.00 f
+  SCAN_INV_13273/Y (INVX1)                                                          0.02 *     1.02 r
+  u_core_SUBP_3__u_tc_ROW_0__COL_4__u_mac_b_r_reg_3_/D (DFFPOSX1)                   0.00 *     1.02 r
+  data arrival time                                                                            1.02
+
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.92 *     0.92
+  u_core_SUBP_3__u_tc_ROW_0__COL_4__u_mac_b_r_reg_3_/CLK (DFFPOSX1)                            0.92 r
+  clock reconvergence pessimism                                                     0.00       0.92
+  clock uncertainty                                                                 0.05       0.97
+  library hold time                                                                -0.02 *     0.95
+  data required time                                                                           0.95
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           0.95
+  data arrival time                                                                           -1.02
+  --------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                  0.07
+
+
+  Startpoint: u_core_SUBP_0__u_tc_ROW_1__COL_3__u_mac_b_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_0__u_tc_ROW_1__COL_3__u_mac_b_r_reg_2_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.97 *     0.97
+  u_core_SUBP_0__u_tc_ROW_1__COL_3__u_mac_b_r_reg_1_/CLK (DFFPOSX1)                 0.00       0.97 r
+  u_core_SUBP_0__u_tc_ROW_1__COL_3__u_mac_b_r_reg_1_/Q (DFFPOSX1)                   0.06 *     1.03 r
+  SCAN_MUX_5199/Y (MUX2X1)                                                          0.03 *     1.07 f
+  SCAN_INV_5199/Y (INVX1)                                                           0.02 *     1.08 r
+  u_core_SUBP_0__u_tc_ROW_1__COL_3__u_mac_b_r_reg_2_/D (DFFPOSX1)                   0.00 *     1.08 r
+  data arrival time                                                                            1.08
+
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.98 *     0.98
+  u_core_SUBP_0__u_tc_ROW_1__COL_3__u_mac_b_r_reg_2_/CLK (DFFPOSX1)                            0.98 r
+  clock reconvergence pessimism                                                     0.00       0.98
+  clock uncertainty                                                                 0.05       1.03
+  library hold time                                                                -0.01 *     1.02
+  data required time                                                                           1.02
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           1.02
+  data arrival time                                                                           -1.08
+  --------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                  0.07
+
+
+  Startpoint: u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_b_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_b_r_reg_2_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.91 *     0.91
+  u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_b_r_reg_1_/CLK (DFFPOSX1)                 0.00       0.91 r
+  u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_b_r_reg_1_/Q (DFFPOSX1)                   0.06 *     0.97 r
+  SCAN_MUX_14194/Y (MUX2X1)                                                         0.03 *     1.00 f
+  SCAN_INV_14194/Y (INVX1)                                                          0.02 *     1.01 r
+  u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_b_r_reg_2_/D (DFFPOSX1)                   0.00 *     1.01 r
+  data arrival time                                                                            1.01
+
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.91 *     0.91
+  u_core_SUBP_3__u_tc_ROW_1__COL_4__u_mac_b_r_reg_2_/CLK (DFFPOSX1)                            0.91 r
+  clock reconvergence pessimism                                                     0.00       0.91
+  clock uncertainty                                                                 0.05       0.96
+  library hold time                                                                -0.02 *     0.95
+  data required time                                                                           0.95
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           0.95
+  data arrival time                                                                           -1.01
+  --------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                  0.07
+
+
+  Startpoint: u_core_SUBP_2__u_tc_CAP_4__q_reg_44_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_2__u_tc_CAP_4__q_reg_45_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: tile_clk
+  Path Group: tile_clk
+  Path Type: min
+
+  Point                                                               Incr       Path
+  ------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                          0.00       0.00
+  clock network delay (propagated)                                    0.89 *     0.89
+  u_core_SUBP_2__u_tc_CAP_4__q_reg_44_/CLK (DFFPOSX1)                 0.00       0.89 r
+  u_core_SUBP_2__u_tc_CAP_4__q_reg_44_/Q (DFFPOSX1)                   0.06 *     0.95 r
+  SCAN_MUX_9314/Y (MUX2X1)                                            0.03 *     0.98 f
+  SCAN_INV_9314/Y (INVX1)                                             0.02 *     1.00 r
+  u_core_SUBP_2__u_tc_CAP_4__q_reg_45_/D (DFFPOSX1)                   0.00 *     1.00 r
+  data arrival time                                                              1.00
+
+  clock tile_clk (rise edge)                                          0.00       0.00
+  clock network delay (propagated)                                    0.89 *     0.89
+  u_core_SUBP_2__u_tc_CAP_4__q_reg_45_/CLK (DFFPOSX1)                            0.89 r
+  clock reconvergence pessimism                                       0.00       0.89
+  clock uncertainty                                                   0.05       0.94
+  library hold time                                                  -0.02 *     0.93
+  data required time                                                             0.93
+  ------------------------------------------------------------------------------------------
+  data required time                                                             0.93
+  data arrival time                                                             -1.00
+  ------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.07
+
+
+  Startpoint: u_core_SUBP_2__mem_reg_13__8_ (rising edge-triggered flip-flop clocked by clk_mem)
+  Endpoint: u_core_SUBP_2__mem_reg_13__9_ (rising edge-triggered flip-flop clocked by clk_mem)
+  Last common pin: clk_mem
+  Path Group: clk_mem
+  Path Type: min
+
+  Point                                                        Incr       Path
+  -----------------------------------------------------------------------------------
+  clock clk_mem (rise edge)                                    0.00       0.00
+  clock network delay (propagated)                             0.59 *     0.59
+  u_core_SUBP_2__mem_reg_13__8_/CLK (DFFPOSX1)                 0.00       0.59 r
+  u_core_SUBP_2__mem_reg_13__8_/Q (DFFPOSX1)                   0.11 *     0.69 f
+  SCAN_MUX_17861/Y (MUX2X1)                                    0.05 *     0.74 r
+  SCAN_INV_17861/Y (INVX1)                                     0.03 *     0.77 f
+  u_core_SUBP_2__mem_reg_13__9_/D (DFFPOSX1)                   0.00 *     0.77 f
+  data arrival time                                                       0.77
+
+  clock clk_mem (rise edge)                                    0.00       0.00
+  clock network delay (propagated)                             0.60 *     0.60
+  u_core_SUBP_2__mem_reg_13__9_/CLK (DFFPOSX1)                            0.60 r
+  clock reconvergence pessimism                                0.00       0.60
+  clock uncertainty                                            0.05       0.65
+  library hold time                                            0.05 *     0.70
+  data required time                                                      0.70
+  -----------------------------------------------------------------------------------
+  data required time                                                      0.70
+  data arrival time                                                      -0.77
+  -----------------------------------------------------------------------------------
+  slack (MET)                                                             0.07
+
+Warning: report_timing has satisfied the max_paths criteria. There are 20713 further endpoints which have paths of interest with slack less than  1000.00 that were not considered when generating this report. (UITE-502)
+
+1

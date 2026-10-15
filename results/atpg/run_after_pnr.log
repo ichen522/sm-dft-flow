@@ -1,0 +1,65 @@
+
+==================== 5-1 LEC #2 (21:10)
+== RESULT LEC #2: 6. Compare Results: PASS ================================================================================ CPU time : 21.64 seconds Elapse time : 26 seconds 
+
+==================== 5-2 SDF flush test (21:11)
+== RESULT FLUSH TEST PASSED: 16 chains, 2893 bits checked; Pathdelays = 422321  	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (422321/422321.00) 
+
+==================== 6 ATPG models (21:11)
+== RESULT model sm_top: PASS: 83736 output x 64-pattern checks, 0 mismatches, 20871 inputs, 327777 bench gates, 200074 netlist cell outputs
+== RESULT model sm_top_tile_clk: PASS: 65520 output x 64-pattern checks, 0 mismatches, 20452 inputs, 283130 bench gates, 200074 netlist cell outputs
+== RESULT model sm_top_clk_mem: PASS: 19128 output x 64-pattern checks, 0 mismatches, 7939 inputs, 48301 bench gates, 200074 netlist cell outputs
+
+==================== 6 Atalanta (one run per capture clock + the all-flops model for the analysis, in parallel) (21:14)
+== RESULT ATPG tile_clk:  Number of test patterns after compaction : 1653; Fault coverage : 99.913 %; Number of collapsed faults : 532064; Number of identified redundant faults : 348; Number of aborted faults : 114;
+== RESULT ATPG clk_mem:  Number of test patterns after compaction : 403; Fault coverage : 100.000 %; Number of collapsed faults : 48920; Number of identified redundant faults : 0; Number of aborted faults : 0;
+
+==================== 6 independent coverage check (union of both sets) (21:17)
+== RESULT union coverage: 19994/20000 = 99.97 %  (95% interval 99.93 - 99.99 %)
+
+==================== 6 undetected-fault analysis (in the background, runs next to 7-1; about 20 minutes) (21:17)
+
+==================== 7-1 serial simulation of the ATPG patterns (21:17)
+== RESULT STIL: read back: 2057 load_unload + 2056 capture calls, 16 scan chains (0 with a different cell order), 89431888 bits compared with the .mem files, 0 differ -> atpg/sm_top.stil.gz
+== RESULT serial zd_0: ATPG SERIAL SIM PASSED: patterns 0..256, 58596 PO bits + 5321442 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_1: ATPG SERIAL SIM PASSED: patterns 257..513, 58596 PO bits + 5321442 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_2: ATPG SERIAL SIM PASSED: patterns 514..770, 58596 PO bits + 5321442 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_3: ATPG SERIAL SIM PASSED: patterns 771..1027, 58596 PO bits + 5321442 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_4: ATPG SERIAL SIM PASSED: patterns 1028..1284, 58596 PO bits + 5321442 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_5: ATPG SERIAL SIM PASSED: patterns 1285..1541, 58596 PO bits + 5321442 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_6: ATPG SERIAL SIM PASSED: patterns 1542..1798, 58596 PO bits + 5321588 scan_out bits checked (timing violations: 0)
+== RESULT serial zd_7: ATPG SERIAL SIM PASSED: patterns 1799..2055, 58596 PO bits + 5321699 scan_out bits checked (timing violations: 0)
+== RESULT serial sdf_tile: ATPG SERIAL SIM PASSED: patterns 0..39, 9120 PO bits + 828240 scan_out bits checked (timing violations: 0)
+== RESULT serial sdf_mem: ATPG SERIAL SIM PASSED: patterns 1653..1692, 9120 PO bits + 828280 scan_out bits checked (timing violations: 0)
+== RESULT serial diag_logic: ATPG SERIAL SIM FAILED: 0 PO + 27 scan_out mismatches (22800 + 2070600 checked) (timing violations: 0)
+== RESULT serial diag_chain: ATPG SERIAL SIM FAILED: 1 PO + 6285 scan_out mismatches (4560 + 414120 checked) (timing violations: 0)
+
+==================== 6 undetected-fault analysis: result (22:08)
+== RESULT aborted 104 retried with backtrack limit 10000: detected 4, proven redundant 0, still aborted 100
+== RESULT DT  detected                              : 594648
+== RESULT AU  untestable only under the constraints : 0
+== RESULT UR  redundant logic                       : 348
+== RESULT ND  aborted (backtrack limit 10)          : 104
+== RESULT fault coverage  DT/all            : 99.924 %
+== RESULT test coverage   DT/(all-UR)       : 99.983 %   (TetraMAX definition, AU counted as missed)
+== RESULT Atalanta "test coverage" DT/(all-AU-UR): 99.983 %
+== RESULT with the aborted faults retried   : fault coverage 99.925 %, test coverage 99.983 %
+
+==================== 7-2 transition grading (LOC and LOS) (22:08)
+== RESULT union LOC stuck-at patterns (all domains) : 18450/20000 = 92.25 %  (95% 91.87 - 92.61)
+== RESULT union LOC + random (all domains)          : 18794/20000 = 93.97 %  (95% 93.63 - 94.29)
+== RESULT union LOS stuck-at patterns (all domains) : 19232/20000 = 96.16 %  (95% 95.88 - 96.42)
+== RESULT union LOS + random (all domains)          : 19291/20000 = 96.45 %  (95% 96.19 - 96.70)
+== RESULT union LOC + LOS, all patterns             : 19658/20000 = 98.29 %  (95% 98.10 - 98.46)
+
+==================== 7-3 PrimeTime (22:13)
+== RESULT PT-RESULT run=sdf mode=func setup_wns=0.151999 setup_violating_endpoints=0 hold_wns=0.063000 hold_violating_endpoints=0
+== RESULT PT-RESULT run=sdf mode=shift setup_wns=6.719347 setup_violating_endpoints=0 hold_wns=0.044000 hold_violating_endpoints=0
+== RESULT PT-RESULT run=spef mode=func setup_wns=-1.145764 setup_violating_endpoints=5854 hold_wns=0.035840 hold_violating_endpoints=0
+== RESULT PT-RESULT run=spef mode=shift setup_wns=6.771954 setup_violating_endpoints=0 hold_wns=0.026984 hold_violating_endpoints=0
+
+==================== 7-4 diagnosis of the injected defects (only pattern data + fail log + netlist model) (22:13)
+== RESULT injected defect u_core_SUBP_2__u_tc_ROW_1__COL_5__u_mac_mult_x_1_n424 stuck-at-1: rank 1, score 0 (best score 0)
+== RESULT injected defect at u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_12_ (position 600): rank 1, miscompares 0
+
+==================== ALL STEPS DONE (22:14)

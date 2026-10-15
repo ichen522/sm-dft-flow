@@ -1,0 +1,288 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-nosplit
+	-slack_lesser_than 1000.00
+	-max_paths 10
+	-sort_by slack
+Design : sm_top
+Version: Y-2026.03
+Date   : Wed Oct 14 22:20:01 2026
+****************************************
+
+
+  Startpoint: u_core_RES_1__rm_reg_11__36_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[0] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                            0.98 *     0.98
+  u_core_RES_1__rm_reg_11__36_/CLK (DFFPOSX1)                 0.00       0.98 r
+  u_core_RES_1__rm_reg_11__36_/Q (DFFPOSX1)                   0.22 *     1.21 r
+  scan_out[0] (out)                                           0.02 *     1.23 r
+  data arrival time                                                      1.23
+
+  clock tile_clk (rise edge)                                 10.00      10.00
+  clock network delay (propagated)                            0.00      10.00
+  clock reconvergence pessimism                               0.00      10.00
+  clock uncertainty                                          -0.05       9.95
+  output external delay                                      -2.00       7.95
+  data required time                                                     7.95
+  ----------------------------------------------------------------------------------
+  data required time                                                     7.95
+  data arrival time                                                     -1.23
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                            6.72
+
+
+  Startpoint: u_core_RES_3__rm_reg_7__38_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[1] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                      Incr       Path
+  ---------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                           0.97 *     0.97
+  u_core_RES_3__rm_reg_7__38_/CLK (DFFPOSX1)                 0.00       0.97 r
+  u_core_RES_3__rm_reg_7__38_/Q (DFFPOSX1)                   0.21 *     1.17 r
+  scan_out[1] (out)                                          0.02 *     1.19 r
+  data arrival time                                                     1.19
+
+  clock tile_clk (rise edge)                                10.00      10.00
+  clock network delay (propagated)                           0.00      10.00
+  clock reconvergence pessimism                              0.00      10.00
+  clock uncertainty                                         -0.05       9.95
+  output external delay                                     -2.00       7.95
+  data required time                                                    7.95
+  ---------------------------------------------------------------------------------
+  data required time                                                    7.95
+  data arrival time                                                    -1.19
+  ---------------------------------------------------------------------------------
+  slack (MET)                                                           6.76
+
+
+  Startpoint: u_core_SUBP_0__u_tc_ROW_0__COL_1__u_mac_a_r_reg_3_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[2] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.93 *     0.93
+  u_core_SUBP_0__u_tc_ROW_0__COL_1__u_mac_a_r_reg_3_/CLK (DFFPOSX1)                 0.00       0.93 r
+  u_core_SUBP_0__u_tc_ROW_0__COL_1__u_mac_a_r_reg_3_/Q (DFFPOSX1)                   0.11 *     1.04 r
+  FE_OCPC3073_scan_out_2/Y (BUFX2)                                                  0.10 *     1.14 r
+  scan_out[2] (out)                                                                 0.01 *     1.15 r
+  data arrival time                                                                            1.15
+
+  clock tile_clk (rise edge)                                                       10.00      10.00
+  clock network delay (propagated)                                                  0.00      10.00
+  clock reconvergence pessimism                                                     0.00      10.00
+  clock uncertainty                                                                -0.05       9.95
+  output external delay                                                            -2.00       7.95
+  data required time                                                                           7.95
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           7.95
+  data arrival time                                                                           -1.15
+  --------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                  6.80
+
+
+  Startpoint: u_core_SUBP_3__u_tc_b_y_reg_6_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[10] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                         Incr       Path
+  ------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                    0.00       0.00
+  clock network delay (propagated)                              0.88 *     0.88
+  u_core_SUBP_3__u_tc_b_y_reg_6_/CLK (DFFPOSX1)                 0.00       0.88 r
+  u_core_SUBP_3__u_tc_b_y_reg_6_/Q (DFFPOSX1)                   0.22 *     1.11 r
+  scan_out[10] (out)                                            0.03 *     1.14 r
+  data arrival time                                                        1.14
+
+  clock tile_clk (rise edge)                                   10.00      10.00
+  clock network delay (propagated)                              0.00      10.00
+  clock reconvergence pessimism                                 0.00      10.00
+  clock uncertainty                                            -0.05       9.95
+  output external delay                                        -2.00       7.95
+  data required time                                                       7.95
+  ------------------------------------------------------------------------------------
+  data required time                                                       7.95
+  data arrival time                                                       -1.14
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                              6.81
+
+
+  Startpoint: u_core_SUBP_3__u_tc_CAP_1__q_reg_28_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[8] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                               Incr       Path
+  ------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                          0.00       0.00
+  clock network delay (propagated)                                    0.88 *     0.88
+  u_core_SUBP_3__u_tc_CAP_1__q_reg_28_/CLK (DFFPOSX1)                 0.00       0.88 r
+  u_core_SUBP_3__u_tc_CAP_1__q_reg_28_/Q (DFFPOSX1)                   0.21 *     1.09 r
+  scan_out[8] (out)                                                   0.02 *     1.11 r
+  data arrival time                                                              1.11
+
+  clock tile_clk (rise edge)                                         10.00      10.00
+  clock network delay (propagated)                                    0.00      10.00
+  clock reconvergence pessimism                                       0.00      10.00
+  clock uncertainty                                                  -0.05       9.95
+  output external delay                                              -2.00       7.95
+  data required time                                                             7.95
+  ------------------------------------------------------------------------------------------
+  data required time                                                             7.95
+  data arrival time                                                             -1.11
+  ------------------------------------------------------------------------------------------
+  slack (MET)                                                                    6.84
+
+
+  Startpoint: u_core_SUBP_2__u_tc_ROW_1__COL_0__u_mac_a_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[7] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.86 *     0.86
+  u_core_SUBP_2__u_tc_ROW_1__COL_0__u_mac_a_r_reg_1_/CLK (DFFPOSX1)                 0.00       0.86 r
+  u_core_SUBP_2__u_tc_ROW_1__COL_0__u_mac_a_r_reg_1_/Q (DFFPOSX1)                   0.07 *     0.93 r
+  FE_OFC2926_scan_out_7/Y (BUFX2)                                                   0.15 *     1.08 r
+  scan_out[7] (out)                                                                 0.01 *     1.09 r
+  data arrival time                                                                            1.09
+
+  clock tile_clk (rise edge)                                                       10.00      10.00
+  clock network delay (propagated)                                                  0.00      10.00
+  clock reconvergence pessimism                                                     0.00      10.00
+  clock uncertainty                                                                -0.05       9.95
+  output external delay                                                            -2.00       7.95
+  data required time                                                                           7.95
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           7.95
+  data arrival time                                                                           -1.09
+  --------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                  6.86
+
+
+  Startpoint: u_stat_snap_tog_reg (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[11] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                              Incr       Path
+  -------------------------------------------------------------------------
+  clock tile_clk (rise edge)                         0.00       0.00
+  clock network delay (propagated)                   0.94 *     0.94
+  u_stat_snap_tog_reg/CLK (DFFPOSX1)                 0.00       0.94 r
+  u_stat_snap_tog_reg/Q (DFFPOSX1)                   0.12 *     1.06 f
+  scan_out[11] (out)                                 0.00 *     1.06 f
+  data arrival time                                             1.06
+
+  clock tile_clk (rise edge)                        10.00      10.00
+  clock network delay (propagated)                   0.00      10.00
+  clock reconvergence pessimism                      0.00      10.00
+  clock uncertainty                                 -0.05       9.95
+  output external delay                             -2.00       7.95
+  data required time                                            7.95
+  -------------------------------------------------------------------------
+  data required time                                            7.95
+  data arrival time                                            -1.06
+  -------------------------------------------------------------------------
+  slack (MET)                                                   6.89
+
+
+  Startpoint: u_core_SUBP_3__u_tc_ROW_0__COL_5__u_mac_p_r_reg_30_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[9] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.91 *     0.91
+  u_core_SUBP_3__u_tc_ROW_0__COL_5__u_mac_p_r_reg_30_/CLK (DFFPOSX1)                 0.00       0.91 r
+  u_core_SUBP_3__u_tc_ROW_0__COL_5__u_mac_p_r_reg_30_/Q (DFFPOSX1)                   0.13 *     1.05 f
+  scan_out[9] (out)                                                                  0.01 *     1.06 f
+  data arrival time                                                                             1.06
+
+  clock tile_clk (rise edge)                                                        10.00      10.00
+  clock network delay (propagated)                                                   0.00      10.00
+  clock reconvergence pessimism                                                      0.00      10.00
+  clock uncertainty                                                                 -0.05       9.95
+  output external delay                                                             -2.00       7.95
+  data required time                                                                            7.95
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            7.95
+  data arrival time                                                                            -1.06
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                   6.89
+
+
+  Startpoint: u_core_SUBP_0__u_tc_ROW_1__COL_4__u_mac_p_r_reg_27_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[3] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.92 *     0.92
+  u_core_SUBP_0__u_tc_ROW_1__COL_4__u_mac_p_r_reg_27_/CLK (DFFPOSX1)                 0.00       0.92 r
+  u_core_SUBP_0__u_tc_ROW_1__COL_4__u_mac_p_r_reg_27_/Q (DFFPOSX1)                   0.13 *     1.05 f
+  scan_out[3] (out)                                                                  0.00 *     1.05 f
+  data arrival time                                                                             1.05
+
+  clock tile_clk (rise edge)                                                        10.00      10.00
+  clock network delay (propagated)                                                   0.00      10.00
+  clock reconvergence pessimism                                                      0.00      10.00
+  clock uncertainty                                                                 -0.05       9.95
+  output external delay                                                             -2.00       7.95
+  data required time                                                                            7.95
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            7.95
+  data arrival time                                                                            -1.05
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                   6.90
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_1__COL_2__u_mac_m_r_reg_14_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: scan_out[5] (output port clocked by tile_clk)
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.89 *     0.89
+  u_core_SUBP_1__u_tc_ROW_1__COL_2__u_mac_m_r_reg_14_/CLK (DFFPOSX1)                 0.00       0.89 r
+  u_core_SUBP_1__u_tc_ROW_1__COL_2__u_mac_m_r_reg_14_/Q (DFFPOSX1)                   0.13 *     1.02 f
+  scan_out[5] (out)                                                                  0.01 *     1.02 f
+  data arrival time                                                                             1.02
+
+  clock tile_clk (rise edge)                                                        10.00      10.00
+  clock network delay (propagated)                                                   0.00      10.00
+  clock reconvergence pessimism                                                      0.00      10.00
+  clock uncertainty                                                                 -0.05       9.95
+  output external delay                                                             -2.00       7.95
+  data required time                                                                            7.95
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            7.95
+  data arrival time                                                                            -1.02
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                   6.93
+
+Warning: report_timing has satisfied the max_paths criteria. There are 20713 further endpoints which have paths of interest with slack less than  1000.00 that were not considered when generating this report. (UITE-502)
+
+1

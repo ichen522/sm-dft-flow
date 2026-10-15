@@ -1,0 +1,6 @@
+2056 patterns, 16 chains, L_max 1347, 166 PI bits, 228 PO bits
+  sm_top_tile_clk: patterns 0..1652, capture tile_clk
+  sm_top_clk_mem: patterns 1653..2055, capture clk_mem
+flops not clocked in their pattern's capture (checked against the loaded value): 14037421
+scan_out bits to check: 42571939 (20706 per pattern); shift cycles per pattern 1347, total 2772835
+wrote atpg/serial/tb_atpg.v and *.mem

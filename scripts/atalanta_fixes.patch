@@ -1,0 +1,108 @@
+diff --git a/atalanta.cpp b/atalanta.cpp
+index c9a8d32..f913918 100644
+--- a/atalanta.cpp
++++ b/atalanta.cpp
+@@ -590,15 +590,21 @@ int main(int argc, char *argv[]) //for windows
+ 	 *  															 *
+ 	 *****************************************************************/
+ 
+-	if (is_random_mode(rptmode)) //RPT Method is USELESS !!
+-	{
+-		//STOP***********************************STOP
+-		/*
+-		ndetect=random_sim(nog, nopi, nopo, LEVEL, nstem, stem, LFSR, randomlimit, maxbits, maxdetect, &ntest, &npacket, &nbit, test);
+-		ntest1=ntest;
+-		gettime(&minutes,&seconds,&runtime2);
+-		simtime1=runtime2-runtime1;
+-		runtime1=runtime2;*/
++	if (is_random_mode(rptmode))
++	{
++		/* sm_top DFT: RPT session re-enabled (this fork had it commented out).
++		   Without it every fault goes through FAN one by one: hours on a
++		   300k-gate circuit, and the pattern buffer overflows. */
++		level *pLFSR = (level *) malloc(sizeof(level) * (g_iNoPI + 1));
++		int iRptDetected = random_sim(g_iNoGate, g_iNoPI, g_iNoPO, iMaxLevelAdd2, iNoStemGates, pStemGates, pLFSR,
++			g_iRPTStopLimit, iMaxBitSize, g_iNoFault, &iNoTempPatterns, &iPacket, &iBit, g_fpTestFile);
++		free(pLFSR);
++		iNoDetected += iRptDetected;
++		getTime(&lfMinutes, &lfSeconds, &lfTime);
++		lfSimTime1 = lfTime - lfTimePre;
++		lfTimePre = lfTime;
++		fprintf(stderr, "RPT done: %d faults detected by %d random patterns (%.1f s)\n",
++			iRptDetected, iNoTempPatterns, lfSimTime1);
+ 	}
+ 
+ 	/******************************************************************
+diff --git a/makefile b/makefile
+index 3be3aa5..750f1e3 100644
+--- a/makefile
++++ b/makefile
+@@ -1,7 +1,7 @@
+ #
+ # Makefile of atalanta
+ #
+-CFLAGS = -O -g
++CFLAGS = -O -g -mcmodel=medium
+ GDATA =	define.h global.h macro.h parameter.h stdafx.h
+ CC=cc
+ #
+diff --git a/parameter.h b/parameter.h
+index e26d6f3..3a2a595 100644
+--- a/parameter.h
++++ b/parameter.h
+@@ -69,7 +69,7 @@
+ #define	MAXBUF		5000	/* number of buffers for backtrace */
+ #define	MAXOBJ		10000
+ #define	MAXTREE		4000
+-#define	MAXTEST		10000
++#define	MAXTEST		40000	/* sm_top DFT: was 10000; pattern buffers hold MAXTEST/10 packets of 32 */
+ #define SHUFFLES	30
+ #define TWO		2
+ #define STOP		-1	
+diff --git a/sim.cpp b/sim.cpp
+index 5007351..48a4fad 100644
+--- a/sim.cpp
++++ b/sim.cpp
+@@ -164,6 +164,11 @@ int random_fsim(int iNoGate, int iNoPI, int iNoPO, int iMaxLevelAdd2, int iStem,
+ 					if (++(*nbit) == maxbit)
+ 					{
+ 						*nbit = 0; (*npacket)++;
++						if (*npacket >= MAXTEST / 10 - 1)
++						{
++							fprintf(stderr, "random_fsim: pattern buffer full (%d packets), stopping RPT\n", *npacket);
++							return(ndetect);
++						}
+ 					}
+ 					if (compact == 'n')
+ 					{
+@@ -651,6 +656,11 @@ int testgen(int iNoGate, int iNoPI, int iNoPO, int iMaxLevelAdd2, int iMaxBitSiz
+ 			if (++(*piBit) == iMaxBitSize)
+ 			{
+ 				*piBit = 0; (*piPacket)++;
++				if (*piPacket >= MAXTEST / 10 - 1)
++				{
++					fprintf(stderr, "testgen: pattern buffer full (%d packets), stopping test generation\n", *piPacket);
++					set(bDone);
++				}
+ 			}
+ 			clear(g_stack);
+ 
+@@ -734,13 +744,13 @@ void randomizePatterns_FSIM(level test_store[][MAXPI + 1], level test_vectors[][
+ {
+ 	//INPUT:  test_store, ipacket, iBit
+ 	//OUTPUT:  test_vectors
+-	int array[MAXTEST *BITSIZE];
+-	int array1[MAXTEST *BITSIZE];
++	/* sm_top DFT: static (2 x 5 MB overflowed the stack once MAXTEST grew), and the
++	   hard-coded "iNoPI = 3357" of this fork removed: it shuffled only the first
++	   3357 inputs of every pattern, corrupting patterns of any larger circuit */
++	static int array[MAXTEST *BITSIZE];
++	static int array1[MAXTEST *BITSIZE];
+ 	int i, j, x, iGlobalBit, k, B, iBit_Local = 0, iPacket_Local = 0;
+ 	int iMaxBitSize = BITSIZE;
+-	//FILE *fp;
+-	fprintf(stderr, "%d ", iNoPI);
+-	iNoPI = 3357; //what the hell is this??
+ 
+ 	iGlobalBit = 32 * ipacket + iBit; //ipacket <= MAXTEST - 1, include ipacket, NOT include iBit !!!
+ 	for (i = 0; i < iGlobalBit; i++)

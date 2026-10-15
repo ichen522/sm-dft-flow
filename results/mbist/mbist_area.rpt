@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : mbist_ctrl_AW9_DW32_SPARES2
+Version: Y-2026.03
+Date   : Wed Oct 14 19:57:26 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    gscl45nm (File: /tools/PDK/NCSU45PDK/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+
+Number of ports:                          133
+Number of nets:                          1304
+Number of cells:                         1266
+Number of combinational cells:           1068
+Number of sequential cells:               197
+Number of macros/black boxes:               0
+Number of buf/inv:                        607
+Number of references:                      17
+
+Combinational area:               2430.504648
+Buf/Inv area:                     1061.087273
+Noncombinational area:            2033.946243
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  4464.450892
+Total area:                 undefined
+1

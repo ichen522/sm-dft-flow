@@ -1,0 +1,676 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-nosplit
+	-slack_lesser_than 1000.00
+	-max_paths 10
+	-sort_by slack
+Design : sm_top
+Version: Y-2026.03
+Date   : Wed Oct 14 22:20:09 2026
+****************************************
+
+
+  Startpoint: u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_0_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_47_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_buf_03168/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.96       0.96
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_0_/CLK (DFFPOSX1)                 0.00       0.96 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_0_/Q (DFFPOSX1)                   0.09 &     1.06 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U506/Y (NAND2X1)                          0.04 &     1.10 f
+  FE_RC_7297_0/Y (OAI21X1)                                                          0.06 &     1.16 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U516/Y (AOI21X1)                          0.04 &     1.20 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U524/Y (OAI21X1)                          0.05 &     1.25 r
+  FE_RC_2537_0/Y (AOI21X1)                                                          0.04 &     1.29 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U566/Y (OAI21X1)                          0.07 &     1.36 r
+  FE_RC_1896_0/Y (AOI21X1)                                                          0.05 &     1.41 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U572/Y (OAI21X1)                          0.07 &     1.49 r
+  FE_RC_4799_0/Y (AOI21X1)                                                          0.03 &     1.52 f
+  FE_RC_4798_0/Y (NAND2X1)                                                          0.03 &     1.55 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U582/Y (AOI21X1)                          0.04 &     1.59 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U584/Y (OAI21X1)                          0.08 &     1.67 r
+  FE_RC_10413_0/Y (AOI21X1)                                                         0.04 &     1.70 f
+  FE_RC_10412_0/Y (NAND2X1)                                                         0.04 &     1.74 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U594/Y (AOI21X1)                          0.04 &     1.78 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U596/Y (OAI21X1)                          0.07 &     1.85 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U600/Y (AOI21X1)                          0.04 &     1.89 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U602/Y (OAI21X1)                          0.06 &     1.95 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U606/Y (AOI21X1)                          0.04 &     1.99 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U608/Y (OAI21X1)                          0.07 &     2.06 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U612/Y (AOI21X1)                          0.04 &     2.10 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U614/Y (OAI21X1)                          0.07 &     2.17 r
+  FE_RC_1900_0/Y (AOI21X1)                                                          0.05 &     2.22 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U620/Y (OAI21X1)                          0.07 &     2.29 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U624/Y (AOI21X1)                          0.05 &     2.34 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U626/Y (OAI21X1)                          0.07 &     2.41 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U630/Y (AOI21X1)                          0.03 &     2.44 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U631/Y (INVX2)                            0.02 &     2.46 r
+  FE_RC_2749_0/Y (NAND2X1)                                                          0.02 &     2.48 f
+  FE_RC_5927_0/Y (NAND2X1)                                                          0.03 &     2.51 r
+  FE_RC_6365_0/Y (NAND2X1)                                                          0.03 &     2.54 f
+  FE_RC_6364_0/Y (NAND2X1)                                                          0.04 &     2.58 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U650/YC (FAX1)                            0.08 &     2.66 r
+  FE_RC_8021_0/Y (NAND2X1)                                                          0.03 &     2.68 f
+  FE_RC_8020_0/Y (NAND2X1)                                                          0.03 &     2.72 r
+  FE_RC_9073_0/Y (NAND2X1)                                                          0.03 &     2.74 f
+  FE_RC_9072_0/Y (NAND2X1)                                                          0.06 &     2.80 r
+  FE_RC_10072_0/Y (NAND2X1)                                                         0.03 &     2.83 f
+  FE_RC_10071_0/Y (NAND2X1)                                                         0.04 &     2.87 r
+  FE_RC_6634_0/Y (OAI21X1)                                                          0.04 &     2.91 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U636/Y (NAND3X1)                          0.03 &     2.94 r
+  SCAN_MUX_10404/Y (MUX2X1)                                                         0.03 &     2.97 f
+  SCAN_INV_10404/Y (INVX1)                                                          0.01 &     2.98 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_47_/D (DFFPOSX1)                  0.00 &     2.98 r
+  data arrival time                                                                            2.98
+
+  clock tile_clk (rise edge)                                                        2.60       2.60
+  clock network delay (propagated)                                                  0.97       3.57
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_47_/CLK (DFFPOSX1)                           3.57 r
+  clock reconvergence pessimism                                                     0.00       3.57
+  clock uncertainty                                                                -0.05       3.52
+  library setup time                                                               -1.69       1.83
+  data required time                                                                           1.83
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           1.83
+  data arrival time                                                                           -2.98
+  --------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                            -1.15
+
+
+  Startpoint: u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_0_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_46_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_buf_03168/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.96       0.96
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_0_/CLK (DFFPOSX1)                 0.00       0.96 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_0_/Q (DFFPOSX1)                   0.09 &     1.06 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U506/Y (NAND2X1)                          0.04 &     1.10 f
+  FE_RC_7297_0/Y (OAI21X1)                                                          0.06 &     1.16 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U516/Y (AOI21X1)                          0.04 &     1.20 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U524/Y (OAI21X1)                          0.05 &     1.25 r
+  FE_RC_2537_0/Y (AOI21X1)                                                          0.04 &     1.29 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U566/Y (OAI21X1)                          0.07 &     1.36 r
+  FE_RC_1896_0/Y (AOI21X1)                                                          0.05 &     1.41 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U572/Y (OAI21X1)                          0.07 &     1.49 r
+  FE_RC_4799_0/Y (AOI21X1)                                                          0.03 &     1.52 f
+  FE_RC_4798_0/Y (NAND2X1)                                                          0.03 &     1.55 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U582/Y (AOI21X1)                          0.04 &     1.59 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U584/Y (OAI21X1)                          0.08 &     1.67 r
+  FE_RC_10413_0/Y (AOI21X1)                                                         0.04 &     1.70 f
+  FE_RC_10412_0/Y (NAND2X1)                                                         0.04 &     1.74 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U594/Y (AOI21X1)                          0.04 &     1.78 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U596/Y (OAI21X1)                          0.07 &     1.85 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U600/Y (AOI21X1)                          0.04 &     1.89 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U602/Y (OAI21X1)                          0.06 &     1.95 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U606/Y (AOI21X1)                          0.04 &     1.99 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U608/Y (OAI21X1)                          0.07 &     2.06 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U612/Y (AOI21X1)                          0.04 &     2.10 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U614/Y (OAI21X1)                          0.07 &     2.17 r
+  FE_RC_1900_0/Y (AOI21X1)                                                          0.05 &     2.22 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U620/Y (OAI21X1)                          0.07 &     2.29 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U624/Y (AOI21X1)                          0.05 &     2.34 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U626/Y (OAI21X1)                          0.07 &     2.41 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U630/Y (AOI21X1)                          0.03 &     2.44 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U631/Y (INVX2)                            0.02 &     2.46 r
+  FE_RC_2749_0/Y (NAND2X1)                                                          0.02 &     2.48 f
+  FE_RC_5927_0/Y (NAND2X1)                                                          0.03 &     2.51 r
+  FE_RC_6365_0/Y (NAND2X1)                                                          0.03 &     2.54 f
+  FE_RC_6364_0/Y (NAND2X1)                                                          0.04 &     2.58 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U650/YC (FAX1)                            0.08 &     2.66 r
+  FE_RC_8021_0/Y (NAND2X1)                                                          0.03 &     2.68 f
+  FE_RC_8020_0/Y (NAND2X1)                                                          0.03 &     2.72 r
+  FE_RC_9073_0/Y (NAND2X1)                                                          0.03 &     2.74 f
+  FE_RC_9072_0/Y (NAND2X1)                                                          0.06 &     2.80 r
+  FE_RC_10064_0/Y (OR2X2)                                                           0.06 &     2.86 r
+  FE_RC_10063_0/Y (NAND3X1)                                                         0.02 &     2.88 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_U640/Y (NAND3X1)                          0.05 &     2.92 r
+  SCAN_MUX_10403/Y (MUX2X1)                                                         0.03 &     2.95 f
+  SCAN_INV_10403/Y (INVX1)                                                          0.00 &     2.95 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_46_/D (DFFPOSX1)                  0.00 &     2.95 r
+  data arrival time                                                                            2.95
+
+  clock tile_clk (rise edge)                                                        2.60       2.60
+  clock network delay (propagated)                                                  0.97       3.57
+  u_core_SUBP_2__u_tc_ROW_0__COL_4__u_mac_p_r_reg_46_/CLK (DFFPOSX1)                           3.57 r
+  clock reconvergence pessimism                                                     0.00       3.57
+  clock uncertainty                                                                -0.05       3.52
+  library setup time                                                               -1.68       1.84
+  data required time                                                                           1.84
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           1.84
+  data arrival time                                                                           -2.95
+  --------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                            -1.11
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_30_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_a_buf_03161/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.97       0.97
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/CLK (DFFPOSX1)                  0.00       0.97 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/Q (DFFPOSX1)                    0.12 &     1.08 r
+  FE_OFC3595_u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_1/Y (INVX2)                 0.03 &     1.11 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U23/Y (NAND2X1)                            0.17 &     1.29 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_mult_x_1_U636/Y (MUX2X1)                   0.09 &     1.37 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U156/YS (HAX1)                             0.06 &     1.44 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U152/Y (NOR2X1)                            0.03 &     1.46 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U154/Y (OAI21X1)                           0.06 &     1.52 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U160/Y (AOI21X1)                           0.04 &     1.57 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U162/Y (OAI21X1)                           0.07 &     1.64 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U168/Y (AOI21X1)                           0.04 &     1.68 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U182/Y (OAI21X1)                           0.06 &     1.74 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U186/Y (AOI21X1)                           0.05 &     1.78 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U188/Y (OAI21X1)                           0.07 &     1.85 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U194/Y (AOI21X1)                           0.04 &     1.90 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U196/Y (OAI21X1)                           0.07 &     1.96 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U202/Y (AOI21X1)                           0.05 &     2.01 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U204/Y (OAI21X1)                           0.07 &     2.08 r
+  FE_RC_7831_0/Y (AOI21X1)                                                           0.05 &     2.14 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U212/Y (OAI21X1)                           0.09 &     2.23 r
+  FE_RC_9471_0/Y (AOI21X1)                                                           0.04 &     2.27 f
+  FE_RC_9470_0/Y (NAND2X1)                                                           0.05 &     2.32 r
+  FE_RC_5530_0/Y (AOI21X1)                                                           0.03 &     2.35 f
+  FE_RC_5529_0/Y (NAND2X1)                                                           0.04 &     2.39 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U234/Y (AOI21X1)                           0.04 &     2.43 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U236/Y (OAI21X1)                           0.07 &     2.50 r
+  FE_RC_7852_0/Y (AOI21X1)                                                           0.05 &     2.55 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U243/Y (INVX1)                             0.01 &     2.56 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U246/Y (AOI21X1)                           0.03 &     2.59 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U247/Y (INVX4)                             0.02 &     2.61 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U268/YC (FAX1)                             0.07 &     2.68 r
+  FE_RC_3398_0/Y (NAND2X1)                                                           0.02 &     2.70 f
+  FE_RC_5567_0/Y (NAND2X1)                                                           0.04 &     2.74 r
+  FE_RC_8097_0/Y (NAND2X1)                                                           0.03 &     2.76 f
+  FE_RC_8096_0/Y (NAND2X1)                                                           0.03 &     2.80 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U258/Y (NAND2X1)                           0.03 &     2.82 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U259/Y (NAND2X1)                           0.04 &     2.86 r
+  FE_RC_3353_0/Y (NAND2X1)                                                           0.03 &     2.89 f
+  FE_RC_3352_0/Y (NAND2X1)                                                           0.03 &     2.92 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U264/Y (XOR2X1)                            0.06 &     2.98 r
+  SCAN_MUX_7282/Y (MUX2X1)                                                           0.03 &     3.01 f
+  SCAN_INV_7282/Y (INVX1)                                                            0.00 &     3.02 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_30_/D (DFFPOSX1)                   0.00 &     3.02 r
+  data arrival time                                                                             3.02
+
+  clock tile_clk (rise edge)                                                         2.60       2.60
+  clock network delay (propagated)                                                   0.98       3.58
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_30_/CLK (DFFPOSX1)                            3.58 r
+  clock reconvergence pessimism                                                      0.00       3.58
+  clock uncertainty                                                                 -0.05       3.53
+  library setup time                                                                -1.59       1.94
+  data required time                                                                            1.94
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            1.94
+  data arrival time                                                                            -3.02
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                             -1.07
+
+
+  Startpoint: u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_a_r_reg_3_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_m_r_reg_30_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_buf_03168/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                             Incr       Path
+  --------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                        0.00       0.00
+  clock network delay (propagated)                                                  0.95       0.95
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_a_r_reg_3_/CLK (DFFPOSX1)                 0.00       0.95 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_a_r_reg_3_/Q (DFFPOSX1)                   0.12 &     1.07 f
+  FE_RC_1089_0/Y (NOR2X1)                                                           0.04 &     1.10 r
+  FE_RC_1088_0/Y (OR2X2)                                                            0.16 &     1.26 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_mult_x_1_U556/Y (MUX2X1)                  0.10 &     1.36 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U145/YS (FAX1)                            0.11 &     1.47 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U174/YS (FAX1)                            0.11 &     1.58 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U11/Y (OR2X2)                             0.05 &     1.63 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U176/Y (NAND2X1)                          0.02 &     1.65 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U182/Y (OAI21X1)                          0.05 &     1.70 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U186/Y (AOI21X1)                          0.05 &     1.75 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U188/Y (OAI21X1)                          0.07 &     1.82 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U194/Y (AOI21X1)                          0.05 &     1.86 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U196/Y (OAI21X1)                          0.07 &     1.93 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U202/Y (AOI21X1)                          0.04 &     1.97 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U204/Y (OAI21X1)                          0.07 &     2.04 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U210/Y (AOI21X1)                          0.04 &     2.08 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U212/Y (OAI21X1)                          0.07 &     2.15 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U218/Y (AOI21X1)                          0.05 &     2.20 f
+  FE_RC_4991_0/Y (NAND2X1)                                                          0.04 &     2.24 r
+  FE_RC_4988_0/Y (OAI21X1)                                                          0.03 &     2.27 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U228/Y (OAI21X1)                          0.06 &     2.33 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U234/Y (AOI21X1)                          0.04 &     2.38 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U236/Y (OAI21X1)                          0.07 &     2.44 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U242/Y (AOI21X1)                          0.04 &     2.48 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U243/Y (INVX1)                            0.01 &     2.49 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U246/Y (AOI21X1)                          0.03 &     2.52 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U247/Y (INVX4)                            0.02 &     2.54 r
+  FE_RC_2286_0/Y (NAND2X1)                                                          0.02 &     2.55 f
+  FE_RC_4331_0/Y (NAND2X1)                                                          0.04 &     2.59 r
+  FE_RC_7378_0/Y (NAND2X1)                                                          0.03 &     2.62 f
+  FE_RC_7377_0/Y (NAND2X1)                                                          0.04 &     2.66 r
+  FE_RC_1419_0/Y (NAND2X1)                                                          0.03 &     2.68 f
+  FE_RC_1418_0/Y (NAND2X1)                                                          0.03 &     2.72 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U258/Y (NAND2X1)                          0.03 &     2.74 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U259/Y (NAND2X1)                          0.04 &     2.78 r
+  FE_RC_7369_0/Y (NAND2X1)                                                          0.03 &     2.81 f
+  FE_RC_7368_0/Y (NAND2X1)                                                          0.03 &     2.84 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_U264/Y (XOR2X1)                           0.05 &     2.89 r
+  SCAN_MUX_10131/Y (MUX2X1)                                                         0.03 &     2.92 f
+  SCAN_INV_10131/Y (INVX1)                                                          0.01 &     2.93 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_m_r_reg_30_/D (DFFPOSX1)                  0.00 &     2.93 r
+  data arrival time                                                                            2.93
+
+  clock tile_clk (rise edge)                                                        2.60       2.60
+  clock network delay (propagated)                                                  0.95       3.55
+  u_core_SUBP_2__u_tc_ROW_0__COL_2__u_mac_m_r_reg_30_/CLK (DFFPOSX1)                           3.55 r
+  clock reconvergence pessimism                                                     0.00       3.55
+  clock uncertainty                                                                -0.05       3.50
+  library setup time                                                               -1.61       1.89
+  data required time                                                                           1.89
+  --------------------------------------------------------------------------------------------------------
+  data required time                                                                           1.89
+  data arrival time                                                                           -2.93
+  --------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                            -1.04
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_29_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_a_buf_03161/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.97       0.97
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/CLK (DFFPOSX1)                  0.00       0.97 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/Q (DFFPOSX1)                    0.12 &     1.08 r
+  FE_OFC3595_u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_1/Y (INVX2)                 0.03 &     1.11 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U23/Y (NAND2X1)                            0.17 &     1.29 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_mult_x_1_U636/Y (MUX2X1)                   0.09 &     1.37 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U156/YS (HAX1)                             0.06 &     1.44 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U152/Y (NOR2X1)                            0.03 &     1.46 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U154/Y (OAI21X1)                           0.06 &     1.52 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U160/Y (AOI21X1)                           0.04 &     1.57 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U162/Y (OAI21X1)                           0.07 &     1.64 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U168/Y (AOI21X1)                           0.04 &     1.68 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U182/Y (OAI21X1)                           0.06 &     1.74 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U186/Y (AOI21X1)                           0.05 &     1.78 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U188/Y (OAI21X1)                           0.07 &     1.85 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U194/Y (AOI21X1)                           0.04 &     1.90 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U196/Y (OAI21X1)                           0.07 &     1.96 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U202/Y (AOI21X1)                           0.05 &     2.01 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U204/Y (OAI21X1)                           0.07 &     2.08 r
+  FE_RC_7831_0/Y (AOI21X1)                                                           0.05 &     2.14 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U212/Y (OAI21X1)                           0.09 &     2.23 r
+  FE_RC_9471_0/Y (AOI21X1)                                                           0.04 &     2.27 f
+  FE_RC_9470_0/Y (NAND2X1)                                                           0.05 &     2.32 r
+  FE_RC_5530_0/Y (AOI21X1)                                                           0.03 &     2.35 f
+  FE_RC_5529_0/Y (NAND2X1)                                                           0.04 &     2.39 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U234/Y (AOI21X1)                           0.04 &     2.43 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U236/Y (OAI21X1)                           0.07 &     2.50 r
+  FE_RC_7852_0/Y (AOI21X1)                                                           0.05 &     2.55 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U243/Y (INVX1)                             0.01 &     2.56 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U246/Y (AOI21X1)                           0.03 &     2.59 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U247/Y (INVX4)                             0.02 &     2.61 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U268/YC (FAX1)                             0.07 &     2.68 r
+  FE_RC_3398_0/Y (NAND2X1)                                                           0.02 &     2.70 f
+  FE_RC_5567_0/Y (NAND2X1)                                                           0.04 &     2.74 r
+  FE_RC_8097_0/Y (NAND2X1)                                                           0.03 &     2.76 f
+  FE_RC_8096_0/Y (NAND2X1)                                                           0.03 &     2.80 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U258/Y (NAND2X1)                           0.03 &     2.82 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U259/Y (NAND2X1)                           0.04 &     2.86 r
+  FE_RC_3359_0/Y (NAND2X1)                                                           0.02 &     2.88 f
+  FE_RC_3356_0/Y (OAI21X1)                                                           0.05 &     2.93 r
+  SCAN_MUX_7281/Y (MUX2X1)                                                           0.04 &     2.97 f
+  SCAN_INV_7281/Y (INVX1)                                                            0.00 &     2.97 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_29_/D (DFFPOSX1)                   0.00 &     2.97 r
+  data arrival time                                                                             2.97
+
+  clock tile_clk (rise edge)                                                         2.60       2.60
+  clock network delay (propagated)                                                   0.98       3.58
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_29_/CLK (DFFPOSX1)                            3.58 r
+  clock reconvergence pessimism                                                      0.00       3.58
+  clock uncertainty                                                                 -0.05       3.53
+  library setup time                                                                -1.59       1.94
+  data required time                                                                            1.94
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            1.94
+  data arrival time                                                                            -2.97
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                             -1.03
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_31_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_a_buf_03161/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.97       0.97
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/CLK (DFFPOSX1)                  0.00       0.97 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/Q (DFFPOSX1)                    0.12 &     1.08 r
+  FE_OFC3595_u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_1/Y (INVX2)                 0.03 &     1.11 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U23/Y (NAND2X1)                            0.17 &     1.29 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_mult_x_1_U622/Y (MUX2X1)                   0.08 &     1.37 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U133/YS (HAX1)                             0.09 &     1.46 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U137/YS (FAX1)                             0.10 &     1.56 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U139/YS (FAX1)                             0.09 &     1.64 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U142/Y (NOR2X1)                            0.05 &     1.69 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U147/Y (NOR2X1)                            0.03 &     1.72 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U186/Y (AOI21X1)                           0.06 &     1.78 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U188/Y (OAI21X1)                           0.04 &     1.82 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U194/Y (AOI21X1)                           0.06 &     1.88 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U196/Y (OAI21X1)                           0.04 &     1.92 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U202/Y (AOI21X1)                           0.07 &     1.99 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U204/Y (OAI21X1)                           0.04 &     2.04 f
+  FE_RC_7831_0/Y (AOI21X1)                                                           0.06 &     2.09 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U212/Y (OAI21X1)                           0.05 &     2.15 f
+  FE_RC_9471_0/Y (AOI21X1)                                                           0.05 &     2.19 r
+  FE_RC_9470_0/Y (NAND2X1)                                                           0.04 &     2.23 f
+  FE_RC_5530_0/Y (AOI21X1)                                                           0.05 &     2.28 r
+  FE_RC_5529_0/Y (NAND2X1)                                                           0.03 &     2.31 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U234/Y (AOI21X1)                           0.07 &     2.37 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U236/Y (OAI21X1)                           0.04 &     2.41 f
+  FE_RC_7852_0/Y (AOI21X1)                                                           0.05 &     2.46 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U243/Y (INVX1)                             0.03 &     2.49 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U246/Y (AOI21X1)                           0.04 &     2.53 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U247/Y (INVX4)                             0.02 &     2.56 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U268/YC (FAX1)                             0.08 &     2.64 f
+  FE_RC_3398_0/Y (NAND2X1)                                                           0.02 &     2.66 r
+  FE_RC_5567_0/Y (NAND2X1)                                                           0.03 &     2.69 f
+  FE_RC_8097_0/Y (NAND2X1)                                                           0.02 &     2.71 r
+  FE_RC_8096_0/Y (NAND2X1)                                                           0.03 &     2.74 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U258/Y (NAND2X1)                           0.02 &     2.76 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U259/Y (NAND2X1)                           0.03 &     2.79 f
+  FE_RC_3353_0/Y (NAND2X1)                                                           0.02 &     2.81 r
+  FE_RC_3352_0/Y (NAND2X1)                                                           0.03 &     2.84 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U469/Y (NAND2X1)                           0.02 &     2.87 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U4/Y (AND2X2)                              0.04 &     2.91 r
+  SCAN_MUX_7283/Y (MUX2X1)                                                           0.02 &     2.93 f
+  SCAN_INV_7283/Y (INVX1)                                                            0.00 &     2.93 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_31_/D (DFFPOSX1)                   0.00 &     2.93 r
+  data arrival time                                                                             2.93
+
+  clock tile_clk (rise edge)                                                         2.60       2.60
+  clock network delay (propagated)                                                   0.98       3.58
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_31_/CLK (DFFPOSX1)                            3.58 r
+  clock reconvergence pessimism                                                      0.00       3.58
+  clock uncertainty                                                                 -0.05       3.53
+  library setup time                                                                -1.60       1.93
+  data required time                                                                            1.93
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            1.93
+  data arrival time                                                                            -2.93
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                             -1.00
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_28_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_a_buf_03161/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.97       0.97
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/CLK (DFFPOSX1)                  0.00       0.97 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_reg_1_/Q (DFFPOSX1)                    0.12 &     1.08 r
+  FE_OFC3595_u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_a_r_1/Y (INVX2)                 0.03 &     1.11 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U23/Y (NAND2X1)                            0.17 &     1.29 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_mult_x_1_U636/Y (MUX2X1)                   0.09 &     1.37 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U156/YS (HAX1)                             0.06 &     1.44 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U152/Y (NOR2X1)                            0.03 &     1.46 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U154/Y (OAI21X1)                           0.06 &     1.52 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U160/Y (AOI21X1)                           0.04 &     1.57 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U162/Y (OAI21X1)                           0.07 &     1.64 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U168/Y (AOI21X1)                           0.04 &     1.68 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U182/Y (OAI21X1)                           0.06 &     1.74 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U186/Y (AOI21X1)                           0.05 &     1.78 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U188/Y (OAI21X1)                           0.07 &     1.85 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U194/Y (AOI21X1)                           0.04 &     1.90 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U196/Y (OAI21X1)                           0.07 &     1.96 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U202/Y (AOI21X1)                           0.05 &     2.01 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U204/Y (OAI21X1)                           0.07 &     2.08 r
+  FE_RC_7831_0/Y (AOI21X1)                                                           0.05 &     2.14 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U212/Y (OAI21X1)                           0.09 &     2.23 r
+  FE_RC_9471_0/Y (AOI21X1)                                                           0.04 &     2.27 f
+  FE_RC_9470_0/Y (NAND2X1)                                                           0.05 &     2.32 r
+  FE_RC_5530_0/Y (AOI21X1)                                                           0.03 &     2.35 f
+  FE_RC_5529_0/Y (NAND2X1)                                                           0.04 &     2.39 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U234/Y (AOI21X1)                           0.04 &     2.43 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U236/Y (OAI21X1)                           0.07 &     2.50 r
+  FE_RC_7852_0/Y (AOI21X1)                                                           0.05 &     2.55 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U243/Y (INVX1)                             0.01 &     2.56 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U246/Y (AOI21X1)                           0.03 &     2.59 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U247/Y (INVX4)                             0.02 &     2.61 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U268/YC (FAX1)                             0.07 &     2.68 r
+  FE_RC_3398_0/Y (NAND2X1)                                                           0.02 &     2.70 f
+  FE_RC_5567_0/Y (NAND2X1)                                                           0.04 &     2.74 r
+  FE_RC_8097_0/Y (NAND2X1)                                                           0.03 &     2.76 f
+  FE_RC_8096_0/Y (NAND2X1)                                                           0.03 &     2.80 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_U253/Y (XOR2X1)                            0.07 &     2.86 r
+  SCAN_MUX_7280/Y (MUX2X1)                                                           0.04 &     2.90 f
+  SCAN_INV_7280/Y (INVX1)                                                            0.00 &     2.90 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_28_/D (DFFPOSX1)                   0.00 &     2.90 r
+  data arrival time                                                                             2.90
+
+  clock tile_clk (rise edge)                                                         2.60       2.60
+  clock network delay (propagated)                                                   0.98       3.58
+  u_core_SUBP_1__u_tc_ROW_0__COL_3__u_mac_m_r_reg_28_/CLK (DFFPOSX1)                            3.58 r
+  clock reconvergence pessimism                                                      0.00       3.58
+  clock uncertainty                                                                 -0.05       3.53
+  library setup time                                                                -1.60       1.93
+  data required time                                                                            1.93
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            1.93
+  data arrival time                                                                            -2.90
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                             -0.97
+
+
+  Startpoint: u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_m_r_reg_0_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_p_r_reg_47_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_buf_03168/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                                Incr       Path
+  -----------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                           0.00       0.00
+  clock network delay (propagated)                                                     0.95       0.95
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_m_r_reg_0_/CLK (DFFPOSX1)                    0.00       0.95 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_m_r_reg_0_/Q (DFFPOSX1)                      0.07 &     1.02 r
+  FE_PHC3956_u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_m_ext_0/Y (BUFX2)                 0.06 &     1.08 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U506/Y (NAND2X1)                             0.04 &     1.12 f
+  FE_RC_5630_0/Y (OAI21X1)                                                             0.06 &     1.18 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U516/Y (AOI21X1)                             0.04 &     1.22 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U524/Y (OAI21X1)                             0.06 &     1.27 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U555/Y (AOI21X1)                             0.04 &     1.31 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U566/Y (OAI21X1)                             0.08 &     1.40 r
+  FE_RC_6267_0/Y (AOI22X1)                                                             0.04 &     1.44 f
+  FE_RC_6266_0/Y (NAND2X1)                                                             0.04 &     1.48 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U576/Y (AOI21X1)                             0.04 &     1.52 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U578/Y (OAI21X1)                             0.07 &     1.58 r
+  FE_RC_2113_0/Y (NAND2X1)                                                             0.03 &     1.62 f
+  FE_RC_7046_0/Y (NOR2X1)                                                              0.03 &     1.65 r
+  FE_RC_7045_0/Y (NOR2X1)                                                              0.02 &     1.67 f
+  FE_RC_7044_0/Y (NAND2X1)                                                             0.05 &     1.72 r
+  FE_RC_6347_0/Y (AOI21X1)                                                             0.04 &     1.76 f
+  FE_RC_6346_0/Y (NAND2X1)                                                             0.05 &     1.81 r
+  FE_RC_10774_0/Y (AOI21X1)                                                            0.03 &     1.84 f
+  FE_RC_10773_0/Y (NAND2X1)                                                            0.05 &     1.89 r
+  FE_RC_9245_0/Y (AOI22X1)                                                             0.03 &     1.93 f
+  FE_RC_9244_0/Y (NAND2X1)                                                             0.05 &     1.97 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U606/Y (AOI21X1)                             0.04 &     2.01 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U608/Y (OAI21X1)                             0.07 &     2.08 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U612/Y (AOI21X1)                             0.04 &     2.12 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U614/Y (OAI21X1)                             0.07 &     2.19 r
+  FE_RC_1891_0/Y (AOI21X1)                                                             0.05 &     2.24 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U620/Y (OAI21X1)                             0.07 &     2.31 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U624/Y (AOI21X1)                             0.04 &     2.35 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U626/Y (OAI21X1)                             0.08 &     2.43 r
+  FE_RC_10643_0/Y (NAND2X1)                                                            0.03 &     2.46 f
+  FE_RC_10642_0/Y (NAND3X1)                                                            0.05 &     2.51 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U654/YC (FAX1)                               0.08 &     2.59 r
+  FE_RC_2861_0/Y (NAND2X1)                                                             0.02 &     2.61 f
+  FE_RC_2860_0/Y (NAND2X1)                                                             0.03 &     2.64 r
+  FE_RC_5674_0/Y (NAND2X1)                                                             0.03 &     2.67 f
+  FE_RC_5673_0/Y (NAND2X1)                                                             0.03 &     2.70 r
+  FE_RC_4542_0/Y (NAND2X1)                                                             0.03 &     2.73 f
+  FE_RC_4541_0/Y (NAND2X1)                                                             0.04 &     2.77 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U638/YC (FAX1)                               0.06 &     2.83 r
+  FE_RC_4022_0/Y (NAND2X1)                                                             0.02 &     2.85 f
+  FE_RC_5980_0/Y (NAND2X1)                                                             0.02 &     2.86 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U635/Y (NAND2X1)                             0.03 &     2.89 f
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_U636/Y (NAND3X1)                             0.05 &     2.94 r
+  SCAN_MUX_9956/Y (MUX2X1)                                                             0.02 &     2.96 f
+  SCAN_INV_9956/Y (INVX1)                                                              0.00 &     2.97 r
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_p_r_reg_47_/D (DFFPOSX1)                     0.00 &     2.97 r
+  data arrival time                                                                               2.97
+
+  clock tile_clk (rise edge)                                                           2.60       2.60
+  clock network delay (propagated)                                                     0.97       3.57
+  u_core_SUBP_2__u_tc_ROW_0__COL_0__u_mac_p_r_reg_47_/CLK (DFFPOSX1)                              3.57 r
+  clock reconvergence pessimism                                                        0.00       3.57
+  clock uncertainty                                                                   -0.05       3.52
+  library setup time                                                                  -1.52       2.00
+  data required time                                                                              2.00
+  -----------------------------------------------------------------------------------------------------------
+  data required time                                                                              2.00
+  data arrival time                                                                              -2.97
+  -----------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                               -0.97
+
+
+  Startpoint: u_core_SUBP_0__u_tc_ROW_0__v7_reg (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_0__u_tc_ROW_1__COL_5__u_mac_p_r_reg_4_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_a_buf_03164/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                           Incr       Path
+  ------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                      0.00       0.00
+  clock network delay (propagated)                                                0.94       0.94
+  u_core_SUBP_0__u_tc_ROW_0__v7_reg/CLK (DFFPOSX1)                                0.00       0.94 r
+  u_core_SUBP_0__u_tc_ROW_0__v7_reg/Q (DFFPOSX1)                                  0.42 &     1.37 r
+  FE_DBTC1618_u_core_SUBP_0__u_tc_ROW_0__v7/Y (INVX2)                             0.41 &     1.77 f
+  u_core_SUBP_0__u_tc_ROW_1__COL_5__u_mac_U634/Y (NOR2X1)                         0.63 &     2.41 r
+  u_core_SUBP_0__u_tc_ROW_1__COL_5__u_mac_U893/Y (NAND2X1)                        0.18 &     2.59 f
+  u_core_SUBP_0__u_tc_ROW_1__COL_5__u_mac_U895/Y (NAND2X1)                        0.11 &     2.70 r
+  SCAN_MUX_5473/Y (MUX2X1)                                                        0.05 &     2.74 f
+  FE_PHC16551_scan_m_5473/Y (CLKBUF2)                                             0.08 &     2.82 f
+  FE_PHC39854_scan_m_5473/Y (BUFX2)                                               0.05 &     2.87 f
+  SCAN_INV_5473/Y (INVX1)                                                         0.01 &     2.88 r
+  u_core_SUBP_0__u_tc_ROW_1__COL_5__u_mac_p_r_reg_4_/D (DFFPOSX1)                 0.00 &     2.88 r
+  data arrival time                                                                          2.88
+
+  clock tile_clk (rise edge)                                                      2.60       2.60
+  clock network delay (propagated)                                                0.94       3.54
+  u_core_SUBP_0__u_tc_ROW_1__COL_5__u_mac_p_r_reg_4_/CLK (DFFPOSX1)                          3.54 r
+  clock reconvergence pessimism                                                   0.00       3.54
+  clock uncertainty                                                              -0.05       3.49
+  library setup time                                                             -1.58       1.92
+  data required time                                                                         1.92
+  ------------------------------------------------------------------------------------------------------
+  data required time                                                                         1.92
+  data arrival time                                                                         -2.88
+  ------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                          -0.96
+
+
+  Startpoint: u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_a_r_reg_1_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Endpoint: u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_m_r_reg_29_ (rising edge-triggered flip-flop clocked by tile_clk)
+  Last common pin: CTS_ccl_a_buf_03161/Y
+  Path Group: tile_clk
+  Path Type: max
+
+  Point                                                                              Incr       Path
+  ---------------------------------------------------------------------------------------------------------
+  clock tile_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                   0.96       0.96
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_a_r_reg_1_/CLK (DFFPOSX1)                  0.00       0.96 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_a_r_reg_1_/Q (DFFPOSX1)                    0.11 &     1.07 r
+  FE_DBTC211_u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_a_r_1/Y (INVX2)                 0.02 &     1.09 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U21/Y (NAND2X1)                            0.14 &     1.24 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_mult_x_1_U636/Y (MUX2X1)                   0.07 &     1.31 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U154/YS (HAX1)                             0.06 &     1.37 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U150/Y (NOR2X1)                            0.03 &     1.39 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U152/Y (OAI21X1)                           0.07 &     1.46 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U158/Y (AOI21X1)                           0.05 &     1.51 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U160/Y (OAI21X1)                           0.07 &     1.58 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U166/Y (AOI21X1)                           0.04 &     1.62 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U180/Y (OAI21X1)                           0.06 &     1.68 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U184/Y (AOI21X1)                           0.05 &     1.72 f
+  FE_RC_3115_0/Y (OAI21X1)                                                           0.07 &     1.79 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U192/Y (AOI21X1)                           0.04 &     1.84 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U194/Y (OAI21X1)                           0.07 &     1.90 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U200/Y (AOI21X1)                           0.04 &     1.95 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U202/Y (OAI21X1)                           0.07 &     2.02 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U208/Y (AOI21X1)                           0.04 &     2.06 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U210/Y (OAI21X1)                           0.07 &     2.13 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U216/Y (AOI21X1)                           0.04 &     2.17 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U218/Y (OAI21X1)                           0.07 &     2.24 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U224/Y (AOI21X1)                           0.04 &     2.28 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U226/Y (OAI21X1)                           0.07 &     2.35 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U232/Y (AOI21X1)                           0.04 &     2.39 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U234/Y (OAI21X1)                           0.07 &     2.46 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U240/Y (AOI21X1)                           0.04 &     2.50 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U241/Y (INVX1)                             0.01 &     2.51 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U244/Y (AOI21X1)                           0.02 &     2.53 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U245/Y (INVX1)                             0.02 &     2.55 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U266/YC (FAX1)                             0.07 &     2.63 r
+  FE_RC_9557_0/Y (NAND2X1)                                                           0.02 &     2.65 f
+  FE_RC_10631_0/Y (NAND2X1)                                                          0.04 &     2.69 r
+  FE_RC_3222_0/Y (NAND2X1)                                                           0.03 &     2.72 f
+  FE_RC_3221_0/Y (NAND2X1)                                                           0.04 &     2.75 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U256/Y (NAND2X1)                           0.03 &     2.78 f
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_U257/Y (NAND2X1)                           0.03 &     2.81 r
+  FE_RC_9552_0/Y (NAND2X1)                                                           0.02 &     2.84 f
+  FE_RC_9549_0/Y (OAI21X1)                                                           0.03 &     2.87 r
+  SCAN_MUX_7057/Y (MUX2X1)                                                           0.03 &     2.89 f
+  SCAN_INV_7057/Y (INVX1)                                                            0.00 &     2.90 r
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_m_r_reg_29_/D (DFFPOSX1)                   0.00 &     2.90 r
+  data arrival time                                                                             2.90
+
+  clock tile_clk (rise edge)                                                         2.60       2.60
+  clock network delay (propagated)                                                   0.98       3.58
+  u_core_SUBP_1__u_tc_ROW_0__COL_1__u_mac_m_r_reg_29_/CLK (DFFPOSX1)                            3.58 r
+  clock reconvergence pessimism                                                      0.00       3.59
+  clock uncertainty                                                                 -0.05       3.54
+  library setup time                                                                -1.56       1.98
+  data required time                                                                            1.98
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                                            1.98
+  data arrival time                                                                            -2.90
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                             -0.92
+
+Warning: report_timing has satisfied the max_paths criteria. There are 21005 further endpoints which have paths of interest with slack less than  1000.00 that were not considered when generating this report. (UITE-502)
+
+1

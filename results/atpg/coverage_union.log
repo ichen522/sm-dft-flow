@@ -1,0 +1,6 @@
+set atpg/sm_top_tile_clk (capture tile_clk): 1653 patterns, good-machine check 27076140 bits, 0 differ, 16379 observed outputs
+set atpg/sm_top_clk_mem (capture clk_mem): 403 patterns, good-machine check 1927146 bits, 0 differ, 4781 observed outputs
+fault universe (uncollapsed, full model): 1222530 faults; sampled 20000
+  tile_clk   set alone : 17665/20000 = 88.33 %
+  clk_mem    set alone : 2687/20000 = 13.44 %
+union coverage: 19994/20000 = 99.97 %  (95% interval 99.93 - 99.99 %)

@@ -1,0 +1,16 @@
+20 patterns applied; scan_out fails per chain: chain 2: 2064, chain 3: 3980, chain 4: 241; PO fails: 1
+failing chain: 3 (tile_clk, 1346 flops, scan_in scan_in[3])
+unloaded values on this chain: 26166 zeros, 754 ones; flops near scan_in always read 0 -> stuck-at-0 on the scan path
+upper bound from the unload: defect at position <= 600 (position 0 is next to scan_in; u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_12_)
+simulated 601 candidate positions (600 .. 0)
+  position   600  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_12_     miscompares 0  <- perfect match
+  position   599  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_11_     miscompares 3
+  position   598  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_10_     miscompares 8
+  position   597  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_9_      miscompares 12
+  position   596  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_8_      miscompares 16
+  position   595  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_7_      miscompares 19
+  position   594  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_6_      miscompares 22
+  position   593  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_5_      miscompares 23
+  position   592  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_4_      miscompares 27
+  position   591  u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_3_      miscompares 31
+injected defect at u_core_SUBP_0__u_tc_ROW_0__COL_6__u_mac_m_r_reg_12_ (position 600): rank 1, miscompares 0

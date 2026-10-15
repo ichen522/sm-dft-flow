@@ -1,0 +1,19 @@
+# 20707 scan flops in 16 chains (netlist flops: 20707)
+# chain clock        edge length  first flop -> last flop
+      0 tile_clk     pos    1347  hold_cnt_reg_0_ -> u_core_RES_1__rm_reg_11__36_
+      1 tile_clk     pos    1346  u_core_RES_1__rm_reg_11__37_ -> u_core_RES_3__rm_reg_7__38_
+      2 tile_clk     pos    1346  u_core_RES_3__rm_reg_7__39_ -> u_core_SUBP_0__u_tc_ROW_0__COL_1__u_mac_a_r_reg_3_
+      3 tile_clk     pos    1346  u_core_SUBP_0__u_tc_ROW_0__COL_1__u_mac_a_r_reg_4_ -> u_core_SUBP_0__u_tc_ROW_1__COL_4__u_mac_p_r_reg_27_
+      4 tile_clk     pos    1346  u_core_SUBP_0__u_tc_ROW_1__COL_4__u_mac_p_r_reg_28_ -> u_core_SUBP_1__u_tc_CAP_12__q_reg_38_
+      5 tile_clk     pos    1346  u_core_SUBP_1__u_tc_CAP_12__q_reg_39_ -> u_core_SUBP_1__u_tc_ROW_1__COL_2__u_mac_m_r_reg_14_
+      6 tile_clk     pos    1346  u_core_SUBP_1__u_tc_ROW_1__COL_2__u_mac_m_r_reg_15_ -> u_core_SUBP_2__u_tc_CAP_7__q_reg_9_
+      7 tile_clk     pos    1346  u_core_SUBP_2__u_tc_CAP_7__q_reg_10_ -> u_core_SUBP_2__u_tc_ROW_1__COL_0__u_mac_a_r_reg_1_
+      8 tile_clk     pos    1346  u_core_SUBP_2__u_tc_ROW_1__COL_0__u_mac_a_r_reg_2_ -> u_core_SUBP_3__u_tc_CAP_1__q_reg_28_
+      9 tile_clk     pos    1346  u_core_SUBP_3__u_tc_CAP_1__q_reg_29_ -> u_core_SUBP_3__u_tc_ROW_0__COL_5__u_mac_p_r_reg_30_
+     10 tile_clk     pos    1346  u_core_SUBP_3__u_tc_ROW_0__COL_5__u_mac_p_r_reg_31_ -> u_core_SUBP_3__u_tc_b_y_reg_6_
+     11 tile_clk     pos    1346  u_core_SUBP_3__u_tc_b_y_reg_7_ -> u_stat_snap_tog_reg
+     12 clk_mem      pos    1139  q_addr_reg_0_ -> u_core_SUBP_1__mem_reg_12__15_
+     13 clk_mem      pos    1139  u_core_SUBP_1__mem_reg_12__16_ -> u_core_SUBP_3__mem_reg_14__2_
+     14 clk_mem      pos    1138  u_core_SUBP_3__mem_reg_14__3_ -> u_core_bmem_reg_8__19_
+     15 clk_mem      pos    1138  u_core_bmem_reg_8__20_ -> u_stat_data_out_reg_127_
+# longest chain: 1347 shift cycles per pattern

@@ -1,0 +1,5 @@
+round 1: 4782 output checks so far, 0 mismatches
+round 2: 9564 output checks so far, 0 mismatches
+round 3: 14346 output checks so far, 0 mismatches
+round 4: 19128 output checks so far, 0 mismatches
+PASS: 19128 output x 64-pattern checks, 0 mismatches, 7939 inputs, 48301 bench gates, 200074 netlist cell outputs

@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mbist_ctrl_AW9_DW32_SPARES2
+Version: Y-2026.03
+Date   : Wed Oct 14 19:57:26 2026
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: alg[1] (input port clocked by clk)
+  Endpoint: c1_addr_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.50       0.50 f
+  alg[1] (in)                              0.00       0.50 f
+  U761/Y (AND2X1)                          0.04       0.54 f
+  U762/Y (INVX1)                           0.00       0.54 r
+  U759/Y (INVX1)                           0.01       0.55 f
+  U760/Y (INVX1)                           0.00       0.56 r
+  U1164/Y (NOR3X1)                         0.02       0.58 f
+  U1165/Y (AOI21X1)                        0.02       0.60 r
+  U889/Y (BUFX2)                           0.03       0.63 r
+  U887/Y (INVX1)                           0.01       0.65 f
+  U888/Y (INVX1)                           0.01       0.65 r
+  U1166/Y (INVX1)                          0.01       0.67 f
+  U1167/Y (OAI21X1)                        0.05       0.72 r
+  U920/Y (AND2X1)                          0.04       0.75 r
+  U921/Y (INVX1)                           0.02       0.78 f
+  U1168/Y (OR2X1)                          0.18       0.96 f
+  U1169/Y (INVX1)                          0.44       1.40 r
+  U1320/Y (INVX1)                          0.25       1.65 f
+  U1350/Y (AOI22X1)                        0.10       1.75 r
+  c1_addr_reg[0]/D (DFFSR)                 0.00       1.75 r
+  data arrival time                                   1.75
+
+  clock clk (rise edge)                    2.50       2.50
+  clock network delay (ideal)              0.00       2.50
+  c1_addr_reg[0]/CLK (DFFSR)               0.00       2.50 r
+  library setup time                      -0.09       2.41
+  data required time                                  2.41
+  -----------------------------------------------------------
+  data required time                                  2.41
+  data arrival time                                  -1.75
+  -----------------------------------------------------------
+  slack (MET)                                         0.66
+
+
+1
